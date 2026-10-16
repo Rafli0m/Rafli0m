@@ -3,6 +3,11 @@
   <!-- Header Banner -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:080f11,50:005b66,100:00e5ff&height=200&section=header&text=Rafli%20Maulana&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Scientist%20%7C%20Informatics%20Student%20%7C%20AI%20%26%20ML%20Enthusiast&descFontSize=18&descAlignY=62" width="100%"/>
 
+  <!-- Profile Avatar -->
+  <br/>
+  <img src="assets/profile.png" alt="Rafli Maulana" width="160" />
+  <br/><br/>
+
   <!-- Typing SVG Animation -->
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=20&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Hi+there,+I'm+Rafli+Maulana;Informatics+Student+%40+Semester+7;Passionate+about+Data+Science+%26+Machine+Learning;Building+Intelligent+Systems+%26+Text+Processing+Solutions" alt="Typing SVG" />
