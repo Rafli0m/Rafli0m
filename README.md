@@ -28,9 +28,6 @@
     </a>
   </p>
 
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=Rafli0m&label=PROFILE+VIEWS&style=flat-square&color=00e5ff" alt="Profile Views"/>
-  </p>
 
 </div>
 
