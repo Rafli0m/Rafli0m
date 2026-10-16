@@ -5,7 +5,7 @@
 
   <!-- Typing SVG Animation -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=20&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Hi+there,+I'm+Rafli+Maulana+%F0%9F%91%8B;Informatics+Student+%40+Semester+7;Passionate+about+Data+Science+%26+Machine+Learning;Building+Intelligent+Systems+%26+Text+Processing+Solutions" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=20&duration=3000&pause=1000&color=00E5FF&center=true&vCenter=true&width=650&lines=Hi+there,+I'm+Rafli+Maulana;Informatics+Student+%40+Semester+7;Passionate+about+Data+Science+%26+Machine+Learning;Building+Intelligent+Systems+%26+Text+Processing+Solutions" alt="Typing SVG" />
   </a>
 
   <!-- Social Badges & Profile Views -->
@@ -32,7 +32,7 @@
 
 ---
 
-### 👨‍💻 About Me
+### About Me
 
 ```yaml
 name: Rafli Maulana
@@ -43,17 +43,17 @@ focus_areas:
   - Expert Systems & Decision Support Systems (DSS)
   - Data Analytics & Predictive Modeling
 current_status: Exploring Advanced NLP & Intelligent Systems
-location: Indonesia 🇮🇩
+location: Indonesia
 ```
 
-- 🎓 Mahasiswa **Informatika** (Semester 7) dengan fokus utama pada **Data Science** dan **Kecerdasan Buatan (AI)**.
-- 💡 Berpengalaman mengembangkan sistem berbasis data seperti Sistem Pendukung Keputusan (PROMETHEE), Sistem Pakar (Certainty Factor & Fuzzy Logic), hingga NLP/Text Processing.
-- 🛠️ Gemar menggabungkan backend development (*Python/Laravel*) dengan pipeline *Machine Learning* untuk menciptakan solusi cerdas yang berdampak.
-- ⚡ **Fun Fact:** Senang mengeksplorasi arsitektur sistem cerdas dan visualisasi data yang presisi.
+- Mahasiswa **Informatika** (Semester 7) dengan fokus utama pada **Data Science** dan **Kecerdasan Buatan (AI)**.
+- Berpengalaman mengembangkan sistem berbasis data seperti Sistem Pendukung Keputusan (PROMETHEE), Sistem Pakar (Certainty Factor & Fuzzy Logic), hingga NLP/Text Processing.
+- Gemar menggabungkan backend development (*Python/Laravel*) dengan pipeline *Machine Learning* untuk menciptakan solusi cerdas yang berdampak.
+- **Fun Fact:** Senang mengeksplorasi arsitektur sistem cerdas dan visualisasi data yang presisi.
 
 ---
 
-### 🛠️ Tech Stack & Skills
+### Tech Stack & Skills
 
 <div align="center">
 
@@ -96,18 +96,18 @@ location: Indonesia 🇮🇩
 
 ---
 
-### 📂 Featured Repositories
+### Featured Repositories
 
 | Repository | Deskripsi | Tech Stack |
 | :--- | :--- | :--- |
-| 📊 **[text-processing](https://github.com/Rafli0m/text-processing)** | Praktikum Pemrosesan Teks (EDA, Preprocessing, Tokenisasi & Analisis Teks). | `Python`, `Jupyter`, `Pandas`, `NLP` |
-| 🧠 **[fuzzy_stres-level](https://github.com/Rafli0m/fuzzy_stres-level)** | Sistem pakar berbasis Fuzzy Logic untuk deteksi tingkat stres mahasiswa. | `Python`, `Fuzzy Logic`, `AI` |
-| 👂 **[sistem-pakar-tht](https://github.com/Rafli0m)** | Sistem pakar diagnosis penyakit THT menerapkan algoritma Certainty Factor. | `Python`, `Certainty Factor`, `Flask` |
-| 🌐 **[portofolio](https://github.com/Rafli0m/portofolio)** | Website portofolio pribadi modern terintegrasi analitik Python di backend. | `Laravel`, `PHP`, `Python`, `Vite` |
+| **[text-processing](https://github.com/Rafli0m/text-processing)** | Praktikum Pemrosesan Teks (EDA, Preprocessing, Tokenisasi & Analisis Teks). | `Python`, `Jupyter`, `Pandas`, `NLP` |
+| **[fuzzy_stres-level](https://github.com/Rafli0m/fuzzy_stres-level)** | Sistem pakar berbasis Fuzzy Logic untuk deteksi tingkat stres mahasiswa. | `Python`, `Fuzzy Logic`, `AI` |
+| **[sistem-pakar-tht](https://github.com/Rafli0m)** | Sistem pakar diagnosis penyakit THT menerapkan algoritma Certainty Factor. | `Python`, `Certainty Factor`, `Flask` |
+| **[portofolio](https://github.com/Rafli0m/portofolio)** | Website portofolio pribadi modern terintegrasi analitik Python di backend. | `Laravel`, `PHP`, `Python`, `Vite` |
 
 ---
 
-### 📊 GitHub Stats
+### GitHub Stats
 
 <div align="center">
   <img height="175em" src="https://github-readme-stats.vercel.app/api?username=Rafli0m&show_icons=true&theme=tokyonight&hide_border=true&title_color=00e5ff&text_color=ffffff&icon_color=00e5ff" alt="Rafli's GitHub Stats" />
@@ -120,7 +120,7 @@ location: Indonesia 🇮🇩
 
 ---
 
-### 🤝 Let's Connect!
+### Let's Connect
 
 <div align="center">
 
