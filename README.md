@@ -1,7 +1,6 @@
 <div align="center">
 
   <!-- Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:080f11,50:005b66,100:00e5ff&height=200&section=header&text=Rafli%20Maulana&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Data%20Scientist%20%7C%20Informatics%20Student%20%7C%20AI%20%26%20ML%20Enthusiast&descFontSize=18&descAlignY=62" width="100%"/>
 
   <!-- Profile Avatar -->
   <br/>
