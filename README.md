@@ -104,7 +104,6 @@ location: Indonesia
 | **[text-processing](https://github.com/Rafli0m/text-processing)** | Praktikum Pemrosesan Teks (EDA, Preprocessing, Tokenisasi & Analisis Teks). | `Python`, `Jupyter`, `Pandas`, `NLP` |
 | **[fuzzy_stres-level](https://github.com/Rafli0m/fuzzy_stres-level)** | Sistem pakar berbasis Fuzzy Logic untuk deteksi tingkat stres mahasiswa. | `Python`, `Fuzzy Logic`, `AI` |
 | **[sistem-pakar-tht](https://github.com/Rafli0m)** | Sistem pakar diagnosis penyakit THT menerapkan algoritma Certainty Factor. | `Python`, `Certainty Factor`, `Flask` |
-| **[portofolio](https://github.com/Rafli0m/portofolio)** | Website portofolio pribadi modern terintegrasi analitik Python di backend. | `Laravel`, `PHP`, `Python`, `Vite` |
 
 ---
 
