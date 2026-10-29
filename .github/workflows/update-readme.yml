@@ -1,0 +1,74 @@
+name: Update README Time
+
+on:
+  schedule:
+    # Setiap 4 jam: 03:17, 07:17, 11:17, 15:17, 19:17, 23:17 WIB.
+    # Cron menggunakan UTC; menit 17 menghindari antrean awal jam.
+    - cron: '17 */4 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/update-readme.yml'
+
+concurrency:
+  group: update-readme-time
+  cancel-in-progress: false
+
+jobs:
+  update-readme:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Update timestamp in WIB
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+          import re
+
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+          start = "<!-- LAST_UPDATED:START -->"
+          end = "<!-- LAST_UPDATED:END -->"
+          if content.count(start) != 1 or content.count(end) != 1:
+              raise SystemExit("README.md harus memiliki tepat satu pasang marker LAST_UPDATED.")
+
+          timestamp = datetime.now(timezone(timedelta(hours=7))).strftime("%d-%m-%Y %H:%M:%S WIB")
+          block = (
+              f'{start}\n<p align="center">\n'
+              f'  <sub>Terakhir diperbarui: <strong>{timestamp}</strong> '
+              '&middot; otomatis setiap 4 jam</sub>\n'
+              f'</p>\n{end}'
+          )
+          updated, count = re.subn(re.escape(start) + r".*?" + re.escape(end), block, content, flags=re.DOTALL)
+          if count != 1:
+              raise SystemExit("Urutan marker LAST_UPDATED di README.md tidak valid.")
+          readme.write_text(updated, encoding="utf-8")
+          print(f"README diperbarui: {timestamp}")
+          PY
+
+      - name: Commit and push README
+        shell: bash
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan waktu."
+            exit 0
+          fi
+          git commit -m "chore: update README timestamp"
+          git pull --rebase origin "$DEFAULT_BRANCH"
+          git push origin "HEAD:$DEFAULT_BRANCH"

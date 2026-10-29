@@ -130,6 +130,12 @@ location: Indonesia
 
 </div>
 
+<!-- LAST_UPDATED:START -->
+<p align="center">
+  <sub>Terakhir diperbarui: <strong>29-10-2026 17:17:10 WIB</strong> &middot; otomatis setiap 4 jam</sub>
+</p>
+<!-- LAST_UPDATED:END -->
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:080f11,50:005b66,100:00e5ff&height=120&section=footer" width="100%"/>
 </p>
