@@ -2,8 +2,8 @@ name: Update README Last Updated
 
 on:
   schedule:
-    # Uji pembaruan otomatis setiap 5 menit.
-    - cron: '*/5 * * * *'
+    # Setiap 4 jam: 03:00, 07:00, 11:00, 15:00, 19:00, 23:00 WIB.
+    - cron: '0 */4 * * *'
   workflow_dispatch:
 
 permissions:
