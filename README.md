@@ -127,9 +127,7 @@ location: Indonesia
 </div>
 
 <!-- LAST_UPDATED:START -->
-<p align="center">
-  <sub>Terakhir diperbarui: <strong>29-10-2026 17:18:18 WIB</strong> &middot; otomatis setiap 4 jam</sub>
-</p>
+<!-- Terakhir diperbarui: 29-10-2026 17:26:19 WIB -->
 <!-- LAST_UPDATED:END -->
 
 <p align="center">

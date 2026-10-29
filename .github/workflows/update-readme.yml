@@ -44,12 +44,7 @@ jobs:
               raise SystemExit("README.md harus memiliki tepat satu pasang marker LAST_UPDATED.")
 
           timestamp = datetime.now(timezone(timedelta(hours=7))).strftime("%d-%m-%Y %H:%M:%S WIB")
-          block = (
-              f'{start}\n<p align="center">\n'
-              f'  <sub>Terakhir diperbarui: <strong>{timestamp}</strong> '
-              '&middot; otomatis setiap 4 jam</sub>\n'
-              f'</p>\n{end}'
-          )
+          block = f"{start}\n<!-- Terakhir diperbarui: {timestamp} -->\n{end}"
           updated, count = re.subn(re.escape(start) + r".*?" + re.escape(end), block, content, flags=re.DOTALL)
           if count != 1:
               raise SystemExit("Urutan marker LAST_UPDATED di README.md tidak valid.")
