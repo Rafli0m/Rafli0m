@@ -109,10 +109,6 @@ location: Indonesia
 
 ### GitHub Stats
 
-<div align="center">
-  <img height="175em" src="https://github-readme-stats.vercel.app/api?username=Rafli0m&show_icons=true&theme=tokyonight&hide_border=true&title_color=00e5ff&text_color=ffffff&icon_color=00e5ff" alt="Rafli's GitHub Stats" />
-  <img height="175em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rafli0m&layout=compact&theme=tokyonight&hide_border=true&title_color=00e5ff&text_color=ffffff" alt="Top Languages" />
-</div>
 
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Rafli0m&theme=tokyonight&hide_border=true&stroke=00e5ff&ring=00e5ff&fire=00e5ff&currStreakLabel=00e5ff" alt="GitHub Streak" />
