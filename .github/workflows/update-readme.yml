@@ -1,10 +1,13 @@
-name: Update README Time
+name: Update README Last Updated
 
 on:
   schedule:
     # Uji pembaruan otomatis setiap 5 menit.
     - cron: '*/5 * * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 concurrency:
   group: update-readme-time
@@ -15,40 +18,24 @@ jobs:
     if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout default branch
-        uses: actions/checkout@v7
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.event.repository.default_branch }}
 
-      - name: Update timestamp in WIB
+      - name: Update Timestamp in README
         shell: bash
         run: |
-          python3 - <<'PY'
-          from datetime import datetime, timedelta, timezone
-          from pathlib import Path
-          import re
+          NOW=$(TZ='Asia/Jakarta' date '+%A, %d %B %Y, %H:%M:%S WIB (UTC+7)')
+          if ! grep -qE '^<!-- Last Updated: .+ -->$' README.md; then
+            echo "::error::Komentar Last Updated tidak ditemukan di README.md."
+            exit 1
+          fi
+          sed -i -E "s|^<!-- Last Updated: .* -->$|<!-- Last Updated: ${NOW} -->|" README.md
+          echo "README updated: ${NOW}"
 
-          readme = Path("README.md")
-          content = readme.read_text(encoding="utf-8")
-          start = "<!-- LAST_UPDATED:START -->"
-          end = "<!-- LAST_UPDATED:END -->"
-          if content.count(start) != 1 or content.count(end) != 1:
-              raise SystemExit("README.md harus memiliki tepat satu pasang marker LAST_UPDATED.")
-
-          timestamp = datetime.now(timezone(timedelta(hours=7))).strftime("%d-%m-%Y %H:%M:%S WIB")
-          block = f"{start}\n<!-- Terakhir diperbarui: {timestamp} -->\n{end}"
-          updated, count = re.subn(re.escape(start) + r".*?" + re.escape(end), block, content, flags=re.DOTALL)
-          if count != 1:
-              raise SystemExit("Urutan marker LAST_UPDATED di README.md tidak valid.")
-          readme.write_text(updated, encoding="utf-8")
-          print(f"README diperbarui: {timestamp}")
-          PY
-
-      - name: Commit and push README
+      - name: Commit and Push Changes
         shell: bash
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
@@ -56,10 +43,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          if git diff --cached --quiet; then
-            echo "Tidak ada perubahan waktu."
-            exit 0
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update Last Updated timestamp [skip ci]"
+            git pull --rebase origin "$DEFAULT_BRANCH"
+            git push origin "HEAD:$DEFAULT_BRANCH"
           fi
-          git commit -m "chore: update README timestamp"
-          git pull --rebase origin "$DEFAULT_BRANCH"
-          git push origin "HEAD:$DEFAULT_BRANCH"

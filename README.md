@@ -127,7 +127,7 @@ location: Indonesia
 </div>
 
 <!-- LAST_UPDATED:START -->
-<!-- Terakhir diperbarui: 29-10-2026 17:26:57 WIB -->
+<!-- Last Updated: Thursday, 29 October 2026, 17:26:57 WIB (UTC+7) -->
 <!-- LAST_UPDATED:END -->
 
 <p align="center">
